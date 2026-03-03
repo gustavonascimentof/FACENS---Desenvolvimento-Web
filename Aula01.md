@@ -1,9 +1,9 @@
 # Resumo — Aula 01
 
 # Objetivos da Aula
-▪ Apresentação da disciplina
-▪ Contexto da Disciplina
-▪ Sequência dos Conteúdos do Semestre
+- Apresentação da disciplina
+- Contexto da Disciplina
+- Sequência dos Conteúdos do Semestre
 
 
 # Principais Conceitos
