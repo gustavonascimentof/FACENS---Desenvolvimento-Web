@@ -8,7 +8,7 @@
 
 # Principais Conceitos
 
-# Conceito 1 — Introdução ao Versionamento e Deploy
+# Conceito 1 - Introdução ao Versionamento e Deploy
 Durante a aula foi reforçada a importância de como o controle de versões é essencial em qualquer tipo de projeto.
 Trata-se da ideia de registrar  alterações em arquivos ao longo do tempo, permitindo:
 - Recuperar versões específicas
