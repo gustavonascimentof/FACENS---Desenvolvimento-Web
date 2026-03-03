@@ -38,7 +38,7 @@ práticas na estruturação do código. Banco de Dados e Autenticação – Inte
 segurança e gerenciamento de usuários
 
 # Conceito 5 - Introdução a Banco de Dados NoSQL
-Foi discutido também um pouco sobre o Banco de Dados não-relacionais, que são aqueles que não seguem modelo de tabela fxa.
+Foi discutido também um pouco sobre o Banco de Dados não-relacionais, que são aqueles que não seguem modelo de tabela fixa.
 Eles também permitem schemas dinâmicos earmazenam diversos tipos de dados. Além de Projetados para escalar horizontalmente, 
 distribuindo dados em múltiplos servidores.
 
