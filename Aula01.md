@@ -27,6 +27,7 @@ seriam desenvolvidos durante o semestre, dentre eles temos:
 - React
 - Vue
 - Angular
+  
 Além disso também será abordado Arquitetura e Componentização – Como os frameworks organizam a
 estrutura do código e facilitam a reutilização. Estado, Rotas e Gerenciamento de Dados – Manipulação do estado
 da aplicação, roteamento e integração com APIs.
