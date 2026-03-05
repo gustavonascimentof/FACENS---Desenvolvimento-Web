@@ -10,13 +10,13 @@
 
 # Conceito 1 - Introdução ao Versionamento e Deploy
 Durante a aula foi reforçada a importância de como o controle de versões é essencial em qualquer tipo de projeto.
-Trata-se da ideia de registrar  alterações em arquivos ao longo do tempo, permitindo:
+Trata-se da ideia de registrar alterações em arquivos ao longo do tempo, permitindo:
 - Recuperar versões específicas
 - Colaboração em equipe
 - Ramificações (branches) para desenvolvimento paralelo
 
 # Conceito 2 - Introdução ao JavaScript (Vanilla JS)
-Foi aboradado também oque é o Vanilla JS. Trata-se do JavaScript puro, sem
+Foi abordado também oque é o Vanilla JS. Trata-se do JavaScript puro, sem
 dependências externas, base para todas as abstrações.
 Além disso permite manipulação de páginas, comunicação com servidores e lógica de
 interface.
@@ -61,3 +61,20 @@ Introdução ao Desenvolvimento Web com HTML, CSS, JavaScript e PHP. Bookman, 20
 de software. São Paulo: Casa do Código, 2015.
 ▪ JavaScript for Modern Web Development – RANJAN, Alok; SINHA, Abhilasha; BATTEWAD,
 Ranjit. BPB Publications, 2020.
+▪ OLIVEIRA, Cláudio Luís Vieira. Node.js programe de forma rápida e prática. São Paulo Expressa
+2021 1 recurso online ISBN 9786558110217.
+▪ FERREIRA, Arthur Gonçalves. Interface de programação de aplicações (API) e web services. São
+Paulo Platos Soluções Educacionais 2021 1 recurso online ISBN 9786553560338.
+▪ ZABOT, Diego. Aplicativos com bootstrap e angular como desenvolver APPs responsivos. São
+Paulo Erica 2020 1 recurso online (Temas essenciais em mobile e websites). ISBN
+9788536533049.
+▪ SADALAGE, Pramond J. NoSQL essencial: um guia conciso para o mundo emergente da
+persistência poliglota. São Paulo, SP: Novatec, 2013. 220 p. ISBN 9788575223383;
+▪ CARDOSO, Leandro da Conceição. Frameworks back end. São Paulo Platos Soluções
+Educacionais 2021 1 recurso online ISBN 9786589965879.
+▪ MARCOLINO, Anderson da Silva. Frameworks front end. São Paulo Platos Soluções
+Educacionais 2021 1 recurso online ISBN 9786589965077.
+▪ GOODMAN, Danny. JavaScript: a bíblia. Rio de Janeiro, RJ: Campus, 2001. 908 p. (Série a
+bíblia). ISBN 8535208283;
+
+
