@@ -1,45 +1,60 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Come Cone</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Nunito:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
 
-  <body>
-    <header style="display: inline; height: 120px">
-      <h1>Come-Cone</h1>
-      <p>Sobre</p>
-    </header>
 
-    <div id="cards" style="display: flex">
-      <div class="card">
-        <hr />
-        <img src="imagem" alt="Cone-kitkat" />
-        <h3>Cone de KitKat</h3>
-        <p>Descricao</p>
-        <h4>R$10,00</h4>
-        <button>Comprar</button>
-        <button>Adicionar ao carrinho</button>
-        <hr />
-      </div>
+<body>
 
-      <div class="card">
-        <hr />
-        <img src="abc.com/cone" alt="Cone-ferrero" />
-        <h3>Cone de Ferrero Rocher</h3>
-        <p>Descricao</p>
-        <h4>R$10,00</h4>
-        <button>Comprar</button>
-        <button>Adicionar ao carrinho</button>
-        <hr />
-      </div>
+  <nav>
+    <a href="#" class="nav-logo">
+      <div class="pacman-icon"></div>
+      Come Cone
+    </a>
+
+    <div class="nav-links">
+      <button class="nav-btn btn-auth"> Entrar </button>
+      <button class="nav-btn btn-cart"> Carrinho </button>
+      <button class="nav-btn btn-profile"> Perfil </button>
     </div>
-  </body>
+  </nav>
 
-  <style>
-    .card {
-      margin-right: 30px;
-    }
-  </style>
+  <main>
+    <h2 class="titulo">Escolha seu cone</h2>
+
+    <div class="container">
+
+      <div class="card">
+        <img src="/assets/Cone-Maracuja.jpeg" alt="Cone Maracujá">
+        <h3>Maracujá</h3>
+        <p class="descricao">Recheio cremoso de maracujá com toque azedinho perfeito.</p>
+        <span class="preco">R$10,00</span>
+        <button> Adicionar ao carrinho </button>
+        
+      </div>
+
+      <div class="card">
+        <img src="/assets/Cone-Ferrero.jpeg" alt="Cone Ferrero">
+        <h3>Ferrero</h3>
+        <p class="descricao">Chocolate intenso com pedaços crocantes estilo Ferrero.</p>
+        <span class="preco">R$10,00</span>
+        <button> Adicionar ao carrinho </button>
+      </div>
+
+      <div class="card">
+        <img src="/assets/Cone_Ninho.jpeg" alt="Cone Ninho com Nutella">
+        <h3>Ninho com Nutella</h3>
+        <p class="descricao">Combinação clássica de leite ninho com Nutella.</p>
+        <span class="preco">R$10,00</span>
+        <button> Adicionar ao carrinho</button>
+      </div>
+
+    </div>
+  </main>
+
+</body>
 </html>
