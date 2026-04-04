@@ -1,60 +1,158 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <title>Come Cone</title>
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Nunito:wght@700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-</head>
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Come Cone</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="top" aria-label="Navegação principal">
+      <a href="#home" class="logo" aria-label="Ir para o início">
+        <div class="pacman-icon" aria-hidden="true"></div>
+        <span>Come Cone</span>
+      </a>
+      <button class="btn cart" type="button" id="cart-open">
+        Carrinho <span class="badge" id="count">0</span>
+      </button>
+    </nav>
 
-
-<body>
-
-  <nav>
-    <a href="#" class="nav-logo">
-      <div class="pacman-icon"></div>
-      Come Cone
-    </a>
-
-    <div class="nav-links">
-      <button class="nav-btn btn-auth"> Entrar </button>
-      <button class="nav-btn btn-cart"> Carrinho </button>
-      <button class="nav-btn btn-profile"> Perfil </button>
-    </div>
-  </nav>
-
-  <main>
-    <h2 class="titulo">Escolha seu cone</h2>
-
-    <div class="container">
-
-      <div class="card">
-        <img src="/assets/Cone-Maracuja.jpeg" alt="Cone Maracujá">
-        <h3>Maracujá</h3>
-        <p class="descricao">Recheio cremoso de maracujá com toque azedinho perfeito.</p>
-        <span class="preco">R$10,00</span>
-        <button> Adicionar ao carrinho </button>
-        
+    <header class="hero" id="home">
+      <div class="hero-content">
+        <h1>Peça seu cone doce favorito em poucos segundos.</h1>
+        <p>O cardápio está pronto para você escolher e comprar.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#menu">Ver cardápio</a>
+        </div>
       </div>
 
-      <div class="card">
-        <img src="/assets/Cone-Ferrero.jpeg" alt="Cone Ferrero">
-        <h3>Ferrero</h3>
-        <p class="descricao">Chocolate intenso com pedaços crocantes estilo Ferrero.</p>
-        <span class="preco">R$10,00</span>
-        <button> Adicionar ao carrinho </button>
+      <figure class="hero-figure">
+        <img
+          src="/assets/Cone_Ninho.jpeg"
+          alt="Cone Ninho com Nutella em destaque"
+        />
+        <figcaption>Pedido de destaque da casa</figcaption>
+      </figure>
+    </header>
+
+    <main>
+      <section class="search-row">
+        <label for="search">Buscar sabor</label>
+        <input
+          id="search"
+          type="search"
+          placeholder="Digite maracujá, ferrero ou ninho"
+        />
+      </section>
+
+      <section class="catalog" id="menu" aria-labelledby="menu-title">
+        <div class="heading">
+          <h2 class="title" id="menu-title">Escolha seu cone</h2>
+          <p>
+            Selecione um sabor, ajuste o carrinho e finalize seu pedido com
+            praticidade.
+          </p>
+        </div>
+
+        <div class="grid">
+          <article
+            class="item"
+            data-name="maracujá"
+            data-price="10"
+            data-product="Maracujá"
+          >
+            <span class="tag">Mais pedido</span>
+            <img
+              src="/assets/Cone-Maracuja.jpeg"
+              alt="Cone Maracujá com recheio cremoso"
+            />
+            <h3>Maracujá</h3>
+            <p class="description">
+              Recheio cremoso de maracujá com toque azedinho perfeito.
+            </p>
+            <span class="price">R$10,00</span>
+            <button class="btn add" type="button">Adicionar ao carrinho</button>
+          </article>
+
+          <article
+            class="item"
+            data-name="ferrero"
+            data-price="10"
+            data-product="Ferrero"
+          >
+            <span class="tag">Crocante</span>
+            <img
+              src="/assets/Cone-Ferrero.jpeg"
+              alt="Cone Ferrero com chocolate intenso"
+            />
+            <h3>Ferrero</h3>
+            <p class="description">
+              Chocolate intenso com pedaços crocantes estilo Ferrero.
+            </p>
+            <span class="price">R$10,00</span>
+            <button class="btn add" type="button">Adicionar ao carrinho</button>
+          </article>
+
+          <article
+            class="item"
+            data-name="ninho com nutella"
+            data-price="10"
+            data-product="Ninho com Nutella"
+          >
+            <span class="tag">Favorito</span>
+            <img
+              src="/assets/Cone_Ninho.jpeg"
+              alt="Cone Ninho com Nutella com cobertura cremosa"
+            />
+            <h3>Ninho com Nutella</h3>
+            <p class="description">
+              Combinação clássica de leite ninho com Nutella.
+            </p>
+            <span class="price">R$10,00</span>
+            <button class="btn add" type="button">Adicionar ao carrinho</button>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <aside class="cart-panel" id="cart">
+      <div class="cart-header">
+        <h2>Carrinho</h2>
+        <button
+          class="icon-btn"
+          type="button"
+          id="cart-close"
+          aria-label="Fechar carrinho"
+        >
+          ×
+        </button>
       </div>
 
-      <div class="card">
-        <img src="/assets/Cone_Ninho.jpeg" alt="Cone Ninho com Nutella">
-        <h3>Ninho com Nutella</h3>
-        <p class="descricao">Combinação clássica de leite ninho com Nutella.</p>
-        <span class="preco">R$10,00</span>
-        <button> Adicionar ao carrinho</button>
+      <div class="cart-body" id="cart-list">
+        <p class="empty-cart">Seu carrinho está vazio.</p>
       </div>
 
-    </div>
-  </main>
+      <div class="cart-footer">
+        <div class="total-line">
+          <span>Total</span>
+          <strong id="total">R$0,00</strong>
+        </div>
+        <button class="btn checkout" type="button" id="checkout">
+          Finalizar pedido
+        </button>
+      </div>
+    </aside>
 
-</body>
+    <div class="overlay" id="overlay" hidden></div>
+
+    <div
+      class="toast"
+      id="toast"
+      role="status"
+      aria-live="polite"
+      aria-atomic="true"
+    ></div>
+
+    <script src="script.js" defer></script>
+  </body>
 </html>
