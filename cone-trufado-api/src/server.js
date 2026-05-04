@@ -18,10 +18,7 @@ const PORT = process.env.PORT || 3333
 
 // ── MIDDLEWARES GLOBAIS ──────────────────────────────
 // Permite requisições do frontend (React)
-app.use(cors({
-  origin: 'http://localhost:5173', // URL do frontend Vite
-  credentials: true,
-}))
+app.use(cors())
 
 // Permite receber JSON no corpo das requisições
 app.use(express.json())
