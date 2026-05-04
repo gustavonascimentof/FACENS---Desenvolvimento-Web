@@ -2,7 +2,7 @@
 // Modal com formulários de Login e Cadastro
 
 import { useState } from 'react'
-import { useAuth } from '../context/AuthContext'
+import { useAuth } from '../../context/AuthContext'
 
 export default function AuthModal({ isOpen, onClose }) {
   const { handleLogin, handleRegister, loading, error } = useAuth()

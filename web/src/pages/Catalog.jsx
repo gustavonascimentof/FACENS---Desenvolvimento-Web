@@ -1,7 +1,7 @@
 // Catalog.jsx
 // Agora busca produtos da API real
 
-import ProductCard from '../components/ProductCard'
+import ProductCard from '../components/common/ProductCard'
 import { useProducts } from '../hooks/useProducts'
 
 export default function Catalog() {

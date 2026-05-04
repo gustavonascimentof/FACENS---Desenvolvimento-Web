@@ -1,8 +1,8 @@
 // CartDrawer.jsx — agora abre o CheckoutModal
 
 import { useState } from 'react'
-import { useCart } from '../context/CartContext'
-import { useAuth } from '../context/AuthContext'
+import { useCart } from '../../context/CartContext'
+import { useAuth } from '../../context/AuthContext'
 import CheckoutModal from './CheckoutModal'
 
 export default function CartDrawer({ isOpen, onClose }) {

@@ -3,19 +3,19 @@
 
 import { useState, useEffect } from 'react'
 import { useAuth } from '../context/AuthContext'
-import AdminProductForm from '../components/AdminProductForm'
+import AdminProductForm from '../components/features/AdminProductForm'
 import api from '../services/api.js'
 import { getAllOrders, updateOrderStatus } from '../services/orderService.js'
-import AdminMetrics from '../components/AdminMetrics'
+import AdminMetrics from '../components/features/AdminMetrics'
 
 // Labels de status dos pedidos em português
 const STATUS_LABELS = {
-  pending:   { label: 'Pendente',    color: 'text-yellow-400 border-yellow-400' },
-  confirmed: { label: 'Confirmado',  color: 'text-blue-400 border-blue-400' },
+  pending: { label: 'Pendente', color: 'text-yellow-400 border-yellow-400' },
+  confirmed: { label: 'Confirmado', color: 'text-blue-400 border-blue-400' },
   preparing: { label: 'Preparando', color: 'text-orange-400 border-orange-400' },
-  ready:     { label: 'Pronto',      color: 'text-green-400 border-green-400' },
-  delivered: { label: 'Entregue',    color: 'text-gray-400 border-gray-400' },
-  cancelled: { label: 'Cancelado',   color: 'text-red-400 border-red-400' },
+  ready: { label: 'Pronto', color: 'text-green-400 border-green-400' },
+  delivered: { label: 'Entregue', color: 'text-gray-400 border-gray-400' },
+  cancelled: { label: 'Cancelado', color: 'text-red-400 border-red-400' },
 }
 
 export default function Admin() {
@@ -41,7 +41,7 @@ export default function Admin() {
 
   // Carrega pedidos ao trocar para a aba de pedidos
   useEffect(() => {
-  if (activeTab === 'orders' || activeTab === 'metrics') fetchOrders()
+    if (activeTab === 'orders' || activeTab === 'metrics') fetchOrders()
   }, [activeTab])
 
   async function fetchProducts() {
@@ -161,8 +161,8 @@ export default function Admin() {
       <div className="flex border-b border-[#2a2a2a] mb-6">
         {[
           { key: 'products', label: '🍦 PRODUTOS' },
-          { key: 'orders',   label: '📦 PEDIDOS' },
-          { key: 'metrics',  label: '📊 MÉTRICAS' },
+          { key: 'orders', label: '📦 PEDIDOS' },
+          { key: 'metrics', label: '📊 MÉTRICAS' },
         ].map(({ key, label }) => (
           <button
             key={key}
@@ -360,10 +360,10 @@ export default function Admin() {
           )}
         </div>
       )}
-    {/* ── ABA DE MÉTRICAS ── */}
-    {activeTab === 'metrics' && (
-     <AdminMetrics orders={orders} products={products} />
-    )}
+      {/* ── ABA DE MÉTRICAS ── */}
+      {activeTab === 'metrics' && (
+        <AdminMetrics orders={orders} products={products} />
+      )}
     </div>
   )
 }

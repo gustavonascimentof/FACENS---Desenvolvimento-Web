@@ -2,7 +2,7 @@
 // Exibe as informações de um produto e botão de adicionar ao carrinho
 
 import { useState } from 'react'
-import { useCart } from '../context/CartContext'
+import { useCart } from '../../context/CartContext'
 
 // "product" é uma prop — dados que vêm de fora do componente
 export default function ProductCard({ product }) {
@@ -12,10 +12,10 @@ export default function ProductCard({ product }) {
   const [added, setAdded] = useState(false)
 
   function handleAdd() {
-  // Garante compatibilidade com _id do MongoDB e id local
-  addItem({ ...product, id: product._id || product.id })
-  setAdded(true)
-  setTimeout(() => setAdded(false), 1000)
+    // Garante compatibilidade com _id do MongoDB e id local
+    addItem({ ...product, id: product._id || product.id })
+    setAdded(true)
+    setTimeout(() => setAdded(false), 1000)
   }
 
   return (

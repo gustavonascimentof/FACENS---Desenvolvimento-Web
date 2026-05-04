@@ -2,9 +2,9 @@
 // Tela de finalização do pedido
 
 import { useState } from 'react'
-import { useCart } from '../context/CartContext'
-import { useAuth } from '../context/AuthContext'
-import { createOrder } from '../services/orderService.js'
+import { useCart } from '../../context/CartContext'
+import { useAuth } from '../../context/AuthContext'
+import { createOrder } from '../../services/orderService.js'
 
 // Número do WhatsApp da loja — troque pelo número real!
 const STORE_WHATSAPP = '5515996963989'

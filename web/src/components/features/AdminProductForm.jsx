@@ -2,7 +2,7 @@
 // Formulário para criar e editar produtos
 
 import { useState } from 'react'
-import api from '../services/api.js'
+import api from '../../services/api.js'
 
 export default function AdminProductForm({ product, onSuccess, onCancel }) {
   // Se receber um produto, preenche o formulário (modo edição)

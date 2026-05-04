@@ -1,14 +1,14 @@
 // App.jsx — versão final com Hero
 
 import { useState } from 'react'
-import { CartProvider, useCart } from './context/CartContext'
-import { AuthProvider, useAuth } from './context/AuthContext'
-import Hero from './components/Hero'
-import Catalog from './pages/Catalog'
-import Admin from './pages/Admin'
-import MyOrders from './pages/MyOrders'
-import CartDrawer from './components/CartDrawer'
-import AuthModal from './components/AuthModal'
+import { CartProvider, useCart } from '../../context/CartContext'
+import { AuthProvider, useAuth } from '../../context/AuthContext'
+import Hero from '../features/Hero'
+import Catalog from '../../pages/Catalog'
+import Admin from '../../pages/Admin'
+import MyOrders from '../../pages/MyOrders'
+import CartDrawer from '../features/CartDrawer'
+import AuthModal from '../features/AuthModal'
 
 function Header({ onCartClick, onAuthClick, currentPage, setCurrentPage }) {
   const { totalItems } = useCart()
@@ -130,12 +130,12 @@ function AppContent() {
       />
 
       <main className="flex-1">
-        {currentPage === 'home'    && (
+        {currentPage === 'home' && (
           <Hero onCatalogClick={() => setCurrentPage('catalog')} />
         )}
         {currentPage === 'catalog' && <Catalog />}
-        {currentPage === 'admin'   && <Admin />}
-        {currentPage === 'orders'  && <MyOrders />}
+        {currentPage === 'admin' && <Admin />}
+        {currentPage === 'orders' && <MyOrders />}
       </main>
 
       <footer className="border-t border-[#2a2a2a] py-4 text-center">
