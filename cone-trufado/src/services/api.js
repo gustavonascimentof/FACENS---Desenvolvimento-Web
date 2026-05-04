@@ -6,7 +6,7 @@ import axios from 'axios'
 // Cria uma instância do axios com configurações padrão
 const api = axios.create({
   // URL base do backend — todas as requisições começam aqui
-  baseURL: 'http://localhost:3333/api',
+  baseURL: import.meta.env.VITE_API_URL || 'http://localhost:3333/api',
   headers: {
     'Content-Type': 'application/json',
   },
