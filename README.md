@@ -125,7 +125,3 @@ npm start
 - Autenticação JWT
 - CORS configurado
 - Validação de entrada
-
-## Licença
-
-FACENS - 2024
