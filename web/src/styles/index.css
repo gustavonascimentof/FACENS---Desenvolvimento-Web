@@ -1,0 +1,75 @@
+/* Importa as fontes do Google Fonts (estilo arcade e corpo) */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Rajdhani:wght@400;500;600;700&display=swap');
+
+/* Diretivas do Tailwind — obrigatórias */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Reset e configurações globais */
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    /* Fundo escuro do tema Pac-Man */
+    background-color: #0a0a0a;
+    color: #ffffff;
+    font-family: 'Rajdhani', sans-serif;
+    
+    /* Efeito de "grade" no fundo, como um fliperama */
+    background-image: 
+      linear-gradient(rgba(255, 215, 0, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 215, 0, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    min-height: 100vh;
+  }
+
+  /* Barra de rolagem personalizada */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0a0a0a;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #FFD700;
+    border-radius: 3px;
+  }
+}
+
+/* Classes utilitárias customizadas */
+@layer components {
+  /* Texto com brilho amarelo (efeito neon) */
+  .text-neon {
+    color: #FFD700;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.8),
+                 0 0 20px rgba(255, 215, 0, 0.4),
+                 0 0 40px rgba(255, 215, 0, 0.2);
+  }
+
+  /* Borda com brilho */
+  .border-neon {
+    border: 1px solid #FFD700;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.3),
+                inset 0 0 10px rgba(255, 215, 0, 0.05);
+  }
+
+  /* Botão padrão do tema */
+  .btn-arcade {
+    @apply bg-pacman-yellow text-black font-arcade text-xs px-6 py-3 
+           uppercase tracking-wider transition-all duration-200
+           hover:bg-pacman-darkYellow hover:scale-105 active:scale-95;
+    font-family: 'Press Start 2P', cursive;
+    clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+  }
+
+  /* Animação do Pac-Man no logo */
+  @keyframes chomp {
+    from { border-radius: 50%; }
+    to   { border-radius: 50% 50% 50% 0%; }
+  }
+}
