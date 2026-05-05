@@ -144,7 +144,11 @@ function AppContent() {
         </p>
       </footer>
 
-      <CartDrawer isOpen={cartOpen} onClose={() => setCartOpen(false)} />
+      <CartDrawer
+        isOpen={cartOpen}
+        onClose={() => setCartOpen(false)}
+        onAuthRequired={() => setAuthOpen(true)}
+      />
       <AuthModal isOpen={authOpen} onClose={() => setAuthOpen(false)} />
     </div>
   )

@@ -1,14 +1,30 @@
 // CartDrawer.jsx — agora abre o CheckoutModal
 
-import { useState } from 'react'
+import React, { useState } from 'react'
 import { useCart } from '../../context/CartContext'
 import { useAuth } from '../../context/AuthContext'
 import CheckoutModal from './CheckoutModal'
 
-export default function CartDrawer({ isOpen, onClose }) {
-  const { items, removeItem, updateQuantity, totalPrice } = useCart()
+// Item de teste (fora do componente para evitar recreação)
+const TEST_ITEM = {
+  id: 'test-cone',
+  name: 'Cone de Teste',
+  price: 15.00,
+  quantity: 1,
+  image: 'https://via.placeholder.com/150?text=Cone+de+Teste',
+}
+
+export default function CartDrawer({ isOpen, onClose, onAuthRequired }) {
+  const { items, removeItem, updateQuantity, totalPrice, addItem } = useCart()
   const { isLoggedIn } = useAuth()
   const [checkoutOpen, setCheckoutOpen] = useState(false)
+
+  // Adiciona item de teste se o carrinho estiver vazio (para fins de teste)
+  React.useEffect(() => {
+    if (isOpen && items.length === 0 && isLoggedIn) {
+      addItem(TEST_ITEM)
+    }
+  }, [isOpen, items.length, isLoggedIn, addItem])
 
   function formatPrice(value) {
     return value.toFixed(2).replace('.', ',')
@@ -116,10 +132,10 @@ export default function CartDrawer({ isOpen, onClose }) {
         </div>
 
         {/* RODAPÉ */}
-        {items.length > 0 && (
-          <div className="border-t border-[#2a2a2a] p-5 space-y-4">
+        <div className="border-t border-[#2a2a2a] p-5 space-y-4">
 
-            {/* Total */}
+          {/* Total */}
+          {items.length > 0 && (
             <div className="space-y-2">
               <div className="flex justify-between text-gray-400 font-body text-sm">
                 <span>Subtotal</span>
@@ -136,29 +152,30 @@ export default function CartDrawer({ isOpen, onClose }) {
                 </span>
               </div>
             </div>
+          )}
 
-            {/* Botão finalizar */}
-            <button
-              onClick={() => {
-                onClose()        // Fecha o drawer
-                setTimeout(() => setCheckoutOpen(true), 300) // Abre o checkout
-              }}
-              className="w-full bg-green-500 hover:bg-green-400 text-black
-                font-arcade text-[10px] py-4 transition-all
-                hover:scale-[1.02] active:scale-95
-                flex items-center justify-center gap-2"
-            >
-              <span>📱</span> FINALIZAR PEDIDO
-            </button>
+          {/* Botão finalizar */}
+          <button
+            onClick={() => {
+              onClose()        // Fecha o drawer
+              setTimeout(() => setCheckoutOpen(true), 300) // Abre o checkout
+            }}
+            className="w-full bg-green-500 hover:bg-green-400 text-black
+              font-arcade text-[10px] py-4 transition-all
+              hover:scale-[1.02] active:scale-95
+              flex items-center justify-center gap-2"
+          >
+            <span>📱</span> FINALIZAR PEDIDO
+          </button>
 
-          </div>
-        )}
+        </div>
       </div>
 
       {/* Modal de checkout */}
       <CheckoutModal
         isOpen={checkoutOpen}
         onClose={() => setCheckoutOpen(false)}
+        onAuthRequired={onAuthRequired}
       />
     </>
   )

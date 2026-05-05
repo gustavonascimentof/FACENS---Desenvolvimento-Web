@@ -225,9 +225,10 @@ export default function CheckoutModal({ isOpen, onClose }) {
             {/* Aviso de login */}
             {!isLoggedIn && (
               <div className="border border-yellow-400 border-opacity-30
-                bg-yellow-400 bg-opacity-5 px-4 py-3">
+  bg-yellow-400 bg-opacity-5 px-4 py-3
+  flex items-center justify-center gap-2">
                 <p className="text-yellow-400 font-body text-xs">
-                  ⚠️ Faça login para salvar seu histórico de pedidos.
+                  ⚠️ Faça login para realizar seu pedido.
                 </p>
               </div>
             )}
