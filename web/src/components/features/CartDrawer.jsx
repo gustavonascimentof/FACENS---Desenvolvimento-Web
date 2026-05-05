@@ -160,9 +160,11 @@ export default function CartDrawer({ isOpen, onClose, onAuthRequired }) {
               onClose()        // Fecha o drawer
               setTimeout(() => setCheckoutOpen(true), 300) // Abre o checkout
             }}
+            disabled={items.length === 0}
             className="w-full bg-green-500 hover:bg-green-400 text-black
               font-arcade text-[10px] py-4 transition-all
               hover:scale-[1.02] active:scale-95
+              disabled:opacity-50 disabled:cursor-not-allowed disabled:scale-100
               flex items-center justify-center gap-2"
           >
             <span>📱</span> FINALIZAR PEDIDO
